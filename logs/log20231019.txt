@@ -1,0 +1,157 @@
+[2023-10-19 14:15:42.988 +05:30 INF] Hello <s:>
+[2023-10-19 14:15:44.706 +05:30 INF] HTTP GET /api/v1/Restaurant/all responded 200 in 19590.9716 ms <s:Serilog.AspNetCore.RequestLoggingMiddleware>
+[2023-10-19 14:17:33.923 +05:30 INF] HTTP POST /api/v1/RestaurantAddress/createRestaurantAddress responded 404 in 68004.2104 ms <s:Serilog.AspNetCore.RequestLoggingMiddleware>
+[2023-10-19 22:33:17.699 +05:30 INF] HTTP GET /api/v1/Restaurant/all responded 200 in 2029.2569 ms <s:Serilog.AspNetCore.RequestLoggingMiddleware>
+[2023-10-19 22:34:31.965 +05:30 INF] HTTP GET /api/v1/Restaurant/getRestaurantById responded 200 in 30671.6411 ms <s:Serilog.AspNetCore.RequestLoggingMiddleware>
+[2023-10-19 22:35:07.253 +05:30 INF] HTTP GET /api/v1/Restaurant/getRestaurantById responded 200 in 25309.0415 ms <s:Serilog.AspNetCore.RequestLoggingMiddleware>
+[2023-10-19 22:35:24.605 +05:30 INF] HTTP GET /api/v1/Restaurant/getRestaurantById responded 200 in 1728.6929 ms <s:Serilog.AspNetCore.RequestLoggingMiddleware>
+[2023-10-19 22:36:27.631 +05:30 INF] HTTP POST /api/v1/Restaurant/createRestaurant responded 400 in 23863.5746 ms <s:Serilog.AspNetCore.RequestLoggingMiddleware>
+[2023-10-19 22:38:49.175 +05:30 INF] HTTP GET /api/v1/Restaurant/all responded 200 in 1937.2675 ms <s:Serilog.AspNetCore.RequestLoggingMiddleware>
+[2023-10-19 22:39:31.338 +05:30 ERR] Failed executing DbCommand (25ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Guid), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [RestaurantAddress] ([RestaurantAddressId], [City], [CreatedBy], [CreatedDate], [RestaurantId], [State], [Street], [UpdatedBy], [UpdatedDate], [ZipCode])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9); <s:Microsoft.EntityFrameworkCore.Database.Command>
+[2023-10-19 22:39:31.424 +05:30 ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.DataContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.RestaurantAddress' with unique index 'IX_RestaurantAddress_RestaurantId'. The duplicate key value is (097db542-4bb6-477d-8301-4e4dbdca8844).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:c6e3168f-e77b-436d-8d39-1502ad2475f6
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) <s:Microsoft.EntityFrameworkCore.Update>
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.RestaurantAddress' with unique index 'IX_RestaurantAddress_RestaurantId'. The duplicate key value is (097db542-4bb6-477d-8301-4e4dbdca8844).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:c6e3168f-e77b-436d-8d39-1502ad2475f6
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+[2023-10-19 22:39:31.492 +05:30 ERR] Exception while executing CreateRestaurantAddressHandler, message = An error occurred while saving the entity changes. See the inner exception for details. <s:>
+[2023-10-19 22:39:42.329 +05:30 ERR] An error occurred while saving the entity changes. See the inner exception for details. <s:>
+[2023-10-19 22:39:55.464 +05:30 ERR] HTTP POST /api/v1/RestaurantAddress/createRestaurantAddress responded 500 in 33347.9456 ms <s:Serilog.AspNetCore.RequestLoggingMiddleware>
+[2023-10-19 22:41:36.883 +05:30 ERR] Failed executing DbCommand (11ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Guid), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [RestaurantAddress] ([RestaurantAddressId], [City], [CreatedBy], [CreatedDate], [RestaurantId], [State], [Street], [UpdatedBy], [UpdatedDate], [ZipCode])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9); <s:Microsoft.EntityFrameworkCore.Database.Command>
+[2023-10-19 22:41:36.890 +05:30 ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.DataContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.RestaurantAddress' with unique index 'IX_RestaurantAddress_RestaurantId'. The duplicate key value is (097db542-4bb6-477d-8301-4e4dbdca8844).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:c6e3168f-e77b-436d-8d39-1502ad2475f6
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) <s:Microsoft.EntityFrameworkCore.Update>
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.RestaurantAddress' with unique index 'IX_RestaurantAddress_RestaurantId'. The duplicate key value is (097db542-4bb6-477d-8301-4e4dbdca8844).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:c6e3168f-e77b-436d-8d39-1502ad2475f6
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+[2023-10-19 22:41:36.935 +05:30 ERR] Exception while executing CreateRestaurantAddressHandler, message = An error occurred while saving the entity changes. See the inner exception for details. <s:>
+[2023-10-19 22:41:36.938 +05:30 ERR] An error occurred while saving the entity changes. See the inner exception for details. <s:>
+[2023-10-19 22:41:47.689 +05:30 ERR] HTTP POST /api/v1/RestaurantAddress/createRestaurantAddress responded 500 in 14572.2695 ms <s:Serilog.AspNetCore.RequestLoggingMiddleware>
+[2023-10-19 22:45:02.679 +05:30 ERR] HTTP POST /api/v1/RestaurantAddress/createRestaurantAddress responded 500 in 13460.1507 ms <s:Serilog.AspNetCore.RequestLoggingMiddleware>
+[2023-10-19 22:46:19.688 +05:30 ERR] HTTP POST /api/v1/RestaurantAddress/createRestaurantAddress responded 500 in 57010.6292 ms <s:Serilog.AspNetCore.RequestLoggingMiddleware>
+[2023-10-19 22:58:13.805 +05:30 ERR] HTTP POST /api/v1/MenuCategory/createCuisine responded 500 in 19247.2426 ms <s:Serilog.AspNetCore.RequestLoggingMiddleware>
+[2023-10-19 23:03:43.317 +05:30 ERR] HTTP POST /api/v1/MenuCategory/createCuisine responded 500 in 4267.6825 ms <s:Serilog.AspNetCore.RequestLoggingMiddleware>
+[2023-10-19 23:03:59.982 +05:30 INF] HTTP GET /api/v1/Restaurant/all responded 200 in 2783.1954 ms <s:Serilog.AspNetCore.RequestLoggingMiddleware>
+[2023-10-19 23:04:29.983 +05:30 ERR] cannot find menu category with menuCategoryId = 097db542-4bb6-477d-8301-4e4dbdca8855 <s:>
+[2023-10-19 23:04:55.301 +05:30 INF] HTTP POST /api/v1/MenuCategory/createCuisine responded 404 in 37122.5990 ms <s:Serilog.AspNetCore.RequestLoggingMiddleware>
+[2023-10-19 23:05:49.072 +05:30 ERR] cannot find menu category with menuCategoryId = 097db542-4bb6-477d-8301-4e4dbdca8855 <s:>
+[2023-10-19 23:18:04.058 +05:30 INF] HTTP GET /api/v1/Restaurant/all responded 200 in 2791.7809 ms <s:Serilog.AspNetCore.RequestLoggingMiddleware>
+[2023-10-19 23:18:54.861 +05:30 ERR] Bad request, Validation Errors:Name
+'Name' must not be empty.
+Price
+'Price' must not be empty.
+ <s:>
+[2023-10-19 23:18:54.884 +05:30 INF] HTTP POST /api/v1/MenuCategory/createCuisine responded 400 in 20111.7888 ms <s:Serilog.AspNetCore.RequestLoggingMiddleware>
+[2023-10-19 23:21:00.850 +05:30 ERR] Bad request, Validation Errors:Name
+'Name' must not be empty.
+Price
+'Price' must not be empty.
+ <s:>
+[2023-10-19 23:21:00.940 +05:30 INF] HTTP POST /api/v1/MenuCategory/createCuisine responded 400 in 9293.9771 ms <s:Serilog.AspNetCore.RequestLoggingMiddleware>
+[2023-10-19 23:22:38.849 +05:30 ERR] Bad request, Validation Errors:MenuCategoryId, MenuCategoryId is not a valid GUID format
+Name, 'Name' must not be empty.
+Price, 'Price' must not be empty.
+ <s:>
+[2023-10-19 23:22:38.944 +05:30 INF] HTTP POST /api/v1/MenuCategory/createCuisine responded 400 in 8753.4372 ms <s:Serilog.AspNetCore.RequestLoggingMiddleware>
+[2023-10-19 23:24:30.870 +05:30 INF] HTTP POST /api/v1/MenuCategory/createCuisine responded 400 in 224.4164 ms <s:Serilog.AspNetCore.RequestLoggingMiddleware>
+[2023-10-19 23:24:54.653 +05:30 ERR] Bad request, Validation Errors:MenuCategoryId, MenuCategoryId is not a valid GUID format
+Name, 'Name' must not be empty.
+Price, 'Price' must not be empty.
+ <s:>
+[2023-10-19 23:24:54.673 +05:30 INF] HTTP POST /api/v1/MenuCategory/createCuisine responded 400 in 10209.9759 ms <s:Serilog.AspNetCore.RequestLoggingMiddleware>

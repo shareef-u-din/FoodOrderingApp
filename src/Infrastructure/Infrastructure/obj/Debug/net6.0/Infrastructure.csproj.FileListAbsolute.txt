@@ -1,0 +1,17 @@
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.AssemblyReference.cache
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Infrastructure\obj\Debug\net6.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfoInputs.cache
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfo.cs
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CoreCompileInputs.cache
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Infrastructure\bin\Debug\net6.0\Infrastructure.deps.json
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Infrastructure\bin\Debug\net6.0\Infrastructure.runtimeconfig.json
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Infrastructure\bin\Debug\net6.0\Infrastructure.dll
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Infrastructure\bin\Debug\net6.0\Infrastructure.pdb
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Infrastructure\bin\Debug\net6.0\Domain.dll
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Infrastructure\bin\Debug\net6.0\Domain.pdb
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CopyComplete
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Infrastructure\obj\Debug\net6.0\Infrastructure.dll
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Infrastructure\obj\Debug\net6.0\refint\Infrastructure.dll
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Infrastructure\obj\Debug\net6.0\Infrastructure.pdb
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Infrastructure\obj\Debug\net6.0\Infrastructure.genruntimeconfig.cache
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll

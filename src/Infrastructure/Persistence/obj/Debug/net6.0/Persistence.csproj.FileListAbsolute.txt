@@ -1,0 +1,11 @@
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Persistence\bin\Debug\net6.0\Persistence.deps.json
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Persistence\bin\Debug\net6.0\Persistence.dll
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Persistence\bin\Debug\net6.0\Persistence.pdb
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Persistence\obj\Debug\net6.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Persistence\obj\Debug\net6.0\Persistence.AssemblyInfoInputs.cache
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Persistence\obj\Debug\net6.0\Persistence.AssemblyInfo.cs
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Persistence\obj\Debug\net6.0\Persistence.csproj.CoreCompileInputs.cache
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Persistence\obj\Debug\net6.0\Persistence.dll
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Persistence\obj\Debug\net6.0\refint\Persistence.dll
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Persistence\obj\Debug\net6.0\Persistence.pdb
+D:\VS Projects\CleanArchitecture\src\Infrastructure\Persistence\obj\Debug\net6.0\ref\Persistence.dll
